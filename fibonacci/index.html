@@ -8,28 +8,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Frequência Fibonacci</title>
+  <title>Sequência Fibonacci</title>
 </head>
 <body>
   <header>
-    <h1>Frequência Fibonacci</h1>
+    <h1>Sequência Fibonacci</h1>
 </header>
-  <section>
-    <div>
-      <label for="numero">Digite um número:</label>
-      <input type="number" name="txtn" id="num">
-      <button  onclick="fib()"> verificar</button>
+  <div class="inputs">
+    <section>
 
+      <div class="main">
+       <label for="numero">Digite um número</label>
+       <input type="number" name="txtn" id="num">
+      </div>
+       
       <div>
+        <button  onclick="fib()"> verificar</button>
+      </div>
+
+      <div class="text-field">
         <p id="seq"></p>
         <p id="res"></p>
       </div>
-
-        
+    </section>
+       
           
-    </div>
+  </div>  
 
-  </section>
+  
 
   <script>
     function fib() {
