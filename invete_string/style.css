@@ -1,0 +1,27 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #56626b;
+}
+
+header{
+  font-weight: bolder;
+  color: wheat;
+  font-size: 20px;
+  text-align: center;
+}
+
+section{
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+}
+
+button {
+  background-color: #a99d94;
+  color:#fffff0 ;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+
+}

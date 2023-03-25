@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>invertendo string</title>
+</head>
+<body>
+  <header> <h1> Invertendo string's</h1></header>
+  <section>
+    <label for="txt">Digite algo:</label>
+    <input type="text" id="txt">
+    <button onclick="res()">Resultado</button>
+
+    <div >
+      <p id="str"></p>
+      <p id="str-invert"></p>
+    </div>
+  </section>
+  <script>
+
+   function res() {
+    
+    let str_user = document.getElementById("str");
+    let invet = document.getElementById("str-invert");
+    let str = document.getElementById("txt").value;
+    let arr = str.split('');
+    let lenstr = str.length;
+    let new_arr = [];
+
+    for (let i =(lenstr-1); i>= 0; i--){
+     new_arr.push(arr[i]);
+    }
+   
+    new_arr.join("");
+    str_user.innerHTML = `String digitada: ${str}`;
+    invet.innerHTML = `String invertida: ${new_arr.join("")}`;
+
+   }
+    
+   
+
+
+  
+  </script>
+</body>
+</html>

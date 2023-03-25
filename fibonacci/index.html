@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frequência Fibonacci</title>
+</head>
+<body>
+  <header>
+    <h1>Frequência Fibonacci</h1>
+</header>
+  <section>
+    <div>
+      <label for="numero">Digite um número:</label>
+      <input type="number" name="txtn" id="num">
+      <button  onclick="fib()"> verificar</button>
+
+      <div>
+        <p id="seq"></p>
+        <p id="res"></p>
+      </div>
+
+        
+          
+    </div>
+
+  </section>
+
+  <script>
+    function fib() {
+      let seq = document.getElementById("seq");
+      let res = document.getElementById("res");
+      let num = parseInt(document.getElementById("num").value);
+      let arr = [];
+      let num_1 = 1;
+      let num_old = 0; 
+
+      while (num_1 <= num){
+      
+        arr.push(num_1);
+        let aux = num_1;
+        num_1 = num_1 + num_old;
+        num_old = aux;
+      }
+      
+      let txt_fib = arr.includes(num) ? "É um número Fibonacci" : "Não é um número Fibonacci"
+      res.innerHTML=`Resultado: ${txt_fib}`;
+      seq.innerHTML= `Sequência: ${arr}`;
+
+    }
+  </script>
+  
+</body>
+
+
+</html>
